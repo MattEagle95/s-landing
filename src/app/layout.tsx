@@ -21,9 +21,9 @@ export default function RootLayout({
         {children}
         <Script
           async
-          src={new URL(
+          src={process.env.NEXT_PUBLIC_STATS_HOST && new URL(
             'script.js',
-            process.env.NEXT_PUBLIC_STATS_HOST || '',
+            process.env.NEXT_PUBLIC_STATS_HOST,
           ).toString()}
           data-website-id={process.env.NEXT_PUBLIC_STATS_WEBSITE_ID}
         />
