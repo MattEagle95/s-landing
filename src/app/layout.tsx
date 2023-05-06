@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME,
+  description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Script
           async
           src="api/stats"
+          data-host-url={process.env.NEXT_PUBLIC_STATS_HOST}
           data-website-id={process.env.NEXT_PUBLIC_STATS_WEBSITE_ID}
         />
       </body>
