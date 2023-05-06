@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  telegrambot:
-    container_name: "telegram-bot"
+  skrambllanding:
+    container_name: "skrambl-landing"
     build: .
     restart: always
     healthcheck:
@@ -12,8 +12,3 @@ services:
       retries: 3
     ports:
       - "3000:3000"
-    volumes:
-      - ./data:/data
-
-volumes:
-  data: {}
