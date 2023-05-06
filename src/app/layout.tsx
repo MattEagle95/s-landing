@@ -23,7 +23,7 @@ export default function RootLayout({
           async
           src={new URL(
             'script.js',
-            process.env.NEXT_PUBLIC_STATS_HOST,
+            process.env.NEXT_PUBLIC_STATS_HOST || '',
           ).toString()}
           data-website-id={process.env.NEXT_PUBLIC_STATS_WEBSITE_ID}
         />
