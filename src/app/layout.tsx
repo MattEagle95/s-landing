@@ -25,7 +25,7 @@ export default function RootLayout({
             'script.js',
             process.env.NEXT_PUBLIC_STATS_HOST,
           ).toString()}
-          data-host-url={process.env.NEXT_PUBLIC_STATS_HOST}
+          data-website-id={process.env.NEXT_PUBLIC_STATS_WEBSITE_ID}
         />
       </body>
     </html>
