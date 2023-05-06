@@ -21,9 +21,11 @@ export default function RootLayout({
         {children}
         <Script
           async
-          src="/api/stats"
+          src={new URL(
+            'script.js',
+            process.env.NEXT_PUBLIC_STATS_HOST,
+          ).toString()}
           data-host-url={process.env.NEXT_PUBLIC_STATS_HOST}
-          data-website-id={process.env.NEXT_PUBLIC_STATS_WEBSITE_ID}
         />
       </body>
     </html>
